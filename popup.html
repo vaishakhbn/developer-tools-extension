@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dev Helper Toolkit</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Dev Helper Toolkit</h1>
+
+      <section class="panel">
+        <label for="length" class="label-row">
+          <span>Password length</span>
+          <output id="lengthValue" for="length">20</output>
+        </label>
+        <input id="length" type="range" min="8" max="64" value="20" />
+
+        <fieldset class="options">
+          <legend>Character sets</legend>
+          <label><input id="lowercase" type="checkbox" checked /> Lowercase</label>
+          <label><input id="uppercase" type="checkbox" checked /> Uppercase</label>
+          <label><input id="numbers" type="checkbox" checked /> Numbers</label>
+          <label><input id="symbols" type="checkbox" checked /> Symbols</label>
+        </fieldset>
+
+        <button id="generateBtn" type="button">Generate Password</button>
+
+        <div class="result">
+          <input id="passwordOutput" type="text" readonly placeholder="Your password appears here" />
+          <button id="copyBtn" type="button">Copy</button>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
+      </section>
+
+      <section class="panel">
+        <div class="history-header">
+          <h2>Last 5 Passwords</h2>
+          <button id="clearHistoryBtn" type="button" class="clear-history-btn">Clear History</button>
+        </div>
+        <ul id="historyList" class="history-list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Dev Helpers</h2>
+
+        <div class="tool-block">
+          <h3>URL Encode / Decode</h3>
+          <textarea id="urlInput" rows="3" placeholder="Enter text or URL"></textarea>
+          <div class="tool-actions">
+            <button id="urlEncodeBtn" type="button">Encode</button>
+            <button id="urlDecodeBtn" type="button">Decode</button>
+            <button id="urlCopyBtn" type="button" class="secondary-btn">Copy Output</button>
+          </div>
+          <textarea id="urlOutput" rows="3" readonly placeholder="Result"></textarea>
+        </div>
+
+        <div class="tool-block">
+          <h3>Base64 Encode / Decode</h3>
+          <textarea id="base64Input" rows="3" placeholder="Enter text"></textarea>
+          <div class="tool-actions">
+            <button id="base64EncodeBtn" type="button">Encode</button>
+            <button id="base64DecodeBtn" type="button">Decode</button>
+            <button id="base64CopyBtn" type="button" class="secondary-btn">Copy Output</button>
+          </div>
+          <textarea id="base64Output" rows="3" readonly placeholder="Result"></textarea>
+        </div>
+
+        <div class="tool-block">
+          <h3>JWT Decode</h3>
+          <textarea id="jwtInput" rows="3" placeholder="Paste JWT token"></textarea>
+          <div class="tool-actions">
+            <button id="jwtDecodeBtn" type="button">Decode</button>
+            <button id="jwtCopyBtn" type="button" class="secondary-btn">Copy Output</button>
+          </div>
+          <textarea id="jwtOutput" rows="5" readonly placeholder="Decoded header and payload"></textarea>
+        </div>
+
+        <div class="tool-block">
+          <h3>JSON Pretty Print</h3>
+          <textarea id="jsonInput" rows="4" placeholder='Paste JSON, e.g. {"name":"dev"}'></textarea>
+          <div class="tool-actions">
+            <button id="jsonPrettyBtn" type="button">Pretty Print</button>
+            <button id="jsonCompactBtn" type="button">Compact</button>
+            <button id="jsonCopyBtn" type="button" class="secondary-btn">Copy Output</button>
+          </div>
+          <textarea id="jsonOutput" rows="5" readonly placeholder="Formatted JSON"></textarea>
+        </div>
+
+        <div class="tool-block">
+          <h3>Unix Timestamp / UTC Converter</h3>
+          <label for="timestampInput" class="tool-label">Unix timestamp (seconds or milliseconds)</label>
+          <textarea id="timestampInput" rows="2" placeholder="e.g. 1700000000 or 1700000000000"></textarea>
+          <div class="tool-actions">
+            <button id="timestampNowBtn" type="button">Now</button>
+            <button id="timestampConvertBtn" type="button">To UTC + Local</button>
+            <button id="timestampCopyBtn" type="button" class="secondary-btn">Copy Output</button>
+          </div>
+          <textarea id="timestampOutput" rows="4" readonly placeholder="UTC and local time"></textarea>
+
+          <label for="utcInput" class="tool-label">UTC date-time (ISO 8601)</label>
+          <textarea id="utcInput" rows="2" placeholder="e.g. 2026-02-21T14:30:00Z"></textarea>
+          <div class="tool-actions">
+            <button id="utcConvertBtn" type="button">UTC to Local + Unix</button>
+            <button id="utcCopyBtn" type="button" class="secondary-btn">Copy Output</button>
+          </div>
+          <textarea id="utcOutput" rows="4" readonly placeholder="Local time and unix values"></textarea>
+        </div>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

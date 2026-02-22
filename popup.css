@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 420px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f6fb;
+  color: #172033;
+}
+
+.container {
+  padding: 14px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d6deea;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+#length {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin: 0 0 10px;
+  padding: 8px;
+  border: 1px solid #d6deea;
+  border-radius: 8px;
+}
+
+.options legend {
+  padding: 0 6px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #1458e6;
+  color: #ffffff;
+}
+
+button:hover {
+  background: #0f46b7;
+}
+
+.secondary-btn {
+  background: #e8efff;
+  color: #153574;
+}
+
+.secondary-btn:hover {
+  background: #d5e3ff;
+}
+
+.result {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+#passwordOutput {
+  width: 100%;
+  border: 1px solid #c4cfdf;
+  border-radius: 8px;
+  padding: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  background: #f8fbff;
+}
+
+.message {
+  min-height: 16px;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #35507d;
+}
+
+.history-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.history-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #e8edf6;
+}
+
+.history-list li:last-child {
+  border-bottom: 0;
+}
+
+.history-value {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
+.copy-history-btn {
+  background: #e8efff;
+  color: #153574;
+  padding: 5px 8px;
+}
+
+.copy-history-btn:hover {
+  background: #d5e3ff;
+}
+
+.clear-history-btn {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.clear-history-btn:hover {
+  background: #ffe4e6;
+}
+
+.tool-block {
+  border-top: 1px solid #e8edf6;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.tool-block:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.tool-block h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.tool-label {
+  display: block;
+  margin: 8px 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23385e;
+}
+
+.tool-actions {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #c4cfdf;
+  border-radius: 8px;
+  padding: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  background: #f8fbff;
+}
