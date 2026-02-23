@@ -24,6 +24,27 @@ A Chrome extension that bundles practical utilities for developers in one popup.
 - `popup.js`: utility logic and interactions
 - `icons/`: extension icons
 
+## Install from GitHub (Chrome)
+
+### Option 1: Download ZIP
+
+1. Open the repository on GitHub
+2. Click **Code** > **Download ZIP**
+3. Extract the ZIP file
+4. Open Chrome and go to `chrome://extensions/`
+5. Enable **Developer mode**
+6. Click **Load unpacked**
+7. Select the extracted `developer-tools-extension` folder
+
+### Option 2: Clone the Repository
+
+1. Clone the repo:
+   `git clone git@github.com:vaishakhbn/developer-tools-extension.git`
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable **Developer mode**
+4. Click **Load unpacked**
+5. Select the cloned `developer-tools-extension` folder
+
 ## Run Locally (Chrome)
 
 1. Open Chrome and go to `chrome://extensions/`
